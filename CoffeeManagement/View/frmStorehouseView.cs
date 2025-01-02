@@ -20,6 +20,7 @@ namespace CoffeeManagement.View
     public partial class frmStorehouseView : SampleView
     {
         private readonly MaterialBL materialBL;
+
         public frmStorehouseView()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace CoffeeManagement.View
             LoadMaterials();
             customDGV(guna2DataGridView1);
         }
+
         private void LoadMaterials()
         {
             var materials = materialBL.GetAllMaterials();
@@ -38,6 +40,7 @@ namespace CoffeeManagement.View
             guna2DataGridView1.DataSource = materials;
             guna2DataGridView1.AutoResizeRows();
         }
+
         private DataGridViewImageColumn CustomImage(string imageName)
         {
             string path = Application.StartupPath;
@@ -55,7 +58,8 @@ namespace CoffeeManagement.View
             dgv.AutoGenerateColumns = true;
 
             LoadMaterials();
-            // Thêm cột hình ảnh "Update"
+
+            // Add Update column
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Icon", "edit_13077251.png"));
             imageColumn.Name = "Update";
@@ -63,7 +67,7 @@ namespace CoffeeManagement.View
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dgv.Columns.Add(imageColumn);
 
-            // Thêm cột hình ảnh "Delete"
+            // Add Delete column
             DataGridViewImageColumn imageColumn1 = new DataGridViewImageColumn();
             imageColumn1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Icon", "delete_12319558.png"));
             imageColumn1.Name = "Delete";
@@ -74,9 +78,28 @@ namespace CoffeeManagement.View
             return dgv;
         }
 
+        // Event for checking expired materials
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            var materials = materialBL.GetAllMaterials();
+            var expiredMaterials = materials.Where(m => m.Hạn_sử_dụng < DateTime.Now).ToList(); // Filter expired materials
 
+            if (expiredMaterials.Any())
+            {
+                guna2DataGridView1.DataSource = expiredMaterials;
+                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Show("Showing expired materials.");
+            }
+            else
+            {
+                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Show("No expired materials found.");
+            }
+        }
 
-
+        // Add new material
         public override void btnAdd_Click(object sender, EventArgs e)
         {
             using (var addForm = new frmStorehouseAdd())
@@ -88,6 +111,7 @@ namespace CoffeeManagement.View
             }
         }
 
+        // Search materials
         public override void txtSearch_TextChanged(object sender, EventArgs e)
         {
             var materialDL = new MaterialDL();
@@ -95,6 +119,7 @@ namespace CoffeeManagement.View
             guna2DataGridView1.DataSource = materials;
         }
 
+        // Update or Delete material
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "Update")
@@ -102,7 +127,6 @@ namespace CoffeeManagement.View
                 frmStorehouseAdd frm = new frmStorehouseAdd();
                 int materialID = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["ID"].Value);
 
-                // Lấy thông tin của material từ DataGridView
                 MaterialTL material = new MaterialTL
                 {
                     ID = materialID,
@@ -115,13 +139,10 @@ namespace CoffeeManagement.View
                     SDT_nhà_cung_cấp = guna2DataGridView1.CurrentRow.Cells["SDT_nhà_cung_cấp"].Value.ToString()
                 };
 
-                // Truyền thông tin material vào form
                 frm.SetMaterial(material);
                 MainClass.BlurBackground(frm);
 
-
-                customDGV(guna2DataGridView1); // Tải lại dữ liệu sau khi cập nhật
-
+                customDGV(guna2DataGridView1);
             }
 
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "Delete")
@@ -137,11 +158,12 @@ namespace CoffeeManagement.View
                     guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                     guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     guna2MessageDialog1.Show("Delete successfully");
-                    customDGV(guna2DataGridView1); // Tải lại dữ liệu sau khi xóa
+                    customDGV(guna2DataGridView1);
                 }
             }
         }
 
+        // View Warehouse History
         private void btnWarehouseHistory_Click(object sender, EventArgs e)
         {
             frmStorehouseHistoryView frm = new frmStorehouseHistoryView();

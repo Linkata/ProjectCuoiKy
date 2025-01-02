@@ -68,6 +68,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnShowProductSales = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ChartSale = new Guna.Charts.WinForms.GunaChart();
+            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -182,6 +183,7 @@
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
             this.guna2ChartRevenue.ZAxes.Ticks = tick3;
+            this.guna2ChartRevenue.Load += new System.EventHandler(this.guna2ChartRevenue_Load);
             // 
             // guna2Panel2
             // 
@@ -212,6 +214,8 @@
             // 
             // guna2ChartSale
             // 
+            this.guna2ChartSale.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
+            this.gunaPieDataset1});
             chartFont9.FontName = "Arial";
             this.guna2ChartSale.Legend.LabelFont = chartFont9;
             this.guna2ChartSale.Location = new System.Drawing.Point(27, 42);
@@ -243,6 +247,12 @@
             chartFont16.FontName = "Arial";
             tick6.Font = chartFont16;
             this.guna2ChartSale.ZAxes.Ticks = tick6;
+            this.guna2ChartSale.Load += new System.EventHandler(this.guna2ChartSale_Load);
+            // 
+            // gunaPieDataset1
+            // 
+            this.gunaPieDataset1.Label = "Pie1";
+            this.gunaPieDataset1.TargetChart = this.guna2ChartSale;
             // 
             // frmHome
             // 
@@ -273,5 +283,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnShowProductSales;
         private Guna.Charts.WinForms.GunaChart guna2ChartSale;
+        private Guna.Charts.WinForms.GunaPieDataset gunaPieDataset1;
     }
 }
