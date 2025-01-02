@@ -169,5 +169,18 @@ namespace CoffeeManagement.View
             frmStorehouseHistoryView frm = new frmStorehouseHistoryView();
             frm.ShowDialog();
         }
+
+        private void closeexpierdBtn_Click(object sender, EventArgs e)
+        {
+            LoadMaterials();
+
+            // Call customDGV to reset and adjust the layout of the DataGridView
+            customDGV(guna2DataGridView1);
+
+            // Optionally, show a message dialog confirming the action
+            guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+
+        }
     }
 }
