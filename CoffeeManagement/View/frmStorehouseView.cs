@@ -111,7 +111,7 @@ namespace CoffeeManagement.View
             }
         }
 
-        // Search materials
+        // Search material
         public override void txtSearch_TextChanged(object sender, EventArgs e)
         {
             var materialDL = new MaterialDL();
