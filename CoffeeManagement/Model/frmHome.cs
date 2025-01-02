@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -16,8 +15,6 @@ namespace CoffeeManagement
         public frmHome()
         {
             InitializeComponent();
-
-
         }
 
         private void btnShowRevenue_Click(object sender, EventArgs e)
@@ -25,15 +22,15 @@ namespace CoffeeManagement
             DateTime startDate = dateTimePickerStart.Value;
             DateTime endDate = dateTimePickerEnd.Value;
 
-            string connectionString = "Data Source=LAPTOP-EF65QNAB\\SQLEXPRESS;Initial Catalog=CM;Persist Security Info=True;User ID=sa;Password=sa;"; // Thay thế bằng chuỗi kết nối thực tế của bạn
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Owner\\Desktop\\ProjectCuoiKy\\CoffeeManagement\\CM.mdf;Integrated Security=True;Connect Timeout=30"; // Thay thế bằng chuỗi kết nối thực tế của bạn
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"SELECT aDate, SUM(amount) AS [Tổng doanh thu]
-                         FROM tblMain m
-                         JOIN tblDetails d ON m.MainID = d.MainID
-                         WHERE aDate BETWEEN @startDate AND @endDate
-                         GROUP BY aDate
-                         ORDER BY aDate";
+                                 FROM tblMain m
+                                 JOIN tblDetails d ON m.MainID = d.MainID
+                                 WHERE aDate BETWEEN @startDate AND @endDate
+                                 GROUP BY aDate
+                                 ORDER BY aDate";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -78,7 +75,6 @@ namespace CoffeeManagement
                 DateTime saleDate = Convert.ToDateTime(row["aDate"]);
                 decimal totalRevenue = Convert.ToDecimal(row["Tổng doanh thu"]);
                 revenueDict[saleDate] = totalRevenue;
-                Console.WriteLine($"{row["aDate"]}: {row["Tổng doanh thu"]}");
             }
 
             // Thêm dữ liệu từ từ điển vào series
@@ -88,7 +84,6 @@ namespace CoffeeManagement
                 decimal totalRevenue = kvp.Value;
                 string formattedDate = date.ToString("dd/MM/yyyy");
                 columnSeries.DataPoints.Add(formattedDate, (double)totalRevenue);
-
             }
 
             // Thêm series vào biểu đồ
@@ -100,14 +95,14 @@ namespace CoffeeManagement
 
         private void btnShowProductSales_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=LAPTOP-EF65QNAB\\SQLEXPRESS;Initial Catalog=CM;Persist Security Info=True;User ID=sa;Password=sa;"; // Thay thế bằng chuỗi kết nối thực tế của bạn
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Owner\\Desktop\\ProjectCuoiKy\\CoffeeManagement\\CM.mdf;Integrated Security=True;Connect Timeout=30"; // Thay thế bằng chuỗi kết nối thực tế của bạn
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"SELECT pName, SUM(qty) AS [Tổng doanh số]
-                         FROM tblDetails d
-                         JOIN products p ON p.pID = d.proID
-                         GROUP BY pName
-                         ORDER BY pName";
+                                 FROM tblDetails d
+                                 JOIN products p ON p.pID = d.proID
+                                 GROUP BY pName
+                                 ORDER BY pName";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -121,32 +116,38 @@ namespace CoffeeManagement
                 }
             }
         }
+
         private void DisplayPieChart(DataTable dt)
         {
             // Xóa các series cũ trong biểu đồ
             guna2ChartSale.Datasets.Clear();
-            // ẩn trục x,y,đặt vị trí chú giải sang phải
+
+            // Đặt vị trí chú giải sang phải và ẩn trục X, Y
             guna2ChartSale.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
             guna2ChartSale.XAxes.Display = false;
             guna2ChartSale.YAxes.Display = false;
 
             // Tạo một series mới cho biểu đồ tròn
-            var pieSeries = new Guna.Charts.WinForms.GunaPieDataset()
+            var pieSeries = new Guna.Charts.WinForms.GunaPieDataset
             {
                 Label = "Doanh số"
             };
 
-
-
             // Thêm dữ liệu từ DataTable vào series
             foreach (DataRow row in dt.Rows)
             {
-
                 string productName = row["pName"].ToString();
                 decimal totalSales = Convert.ToDecimal(row["Tổng doanh số"]);
 
                 // Thêm điểm dữ liệu vào series (tên sản phẩm và doanh số)
                 pieSeries.DataPoints.Add(productName, (double)totalSales);
+            }
+
+            // Cập nhật lại dữ liệu hiển thị tên sản phẩm thay vì số
+            foreach (var dataPoint in pieSeries.DataPoints)
+            {
+                // Setting the label of each slice to the product name
+
             }
 
             // Thêm series vào biểu đồ
@@ -156,6 +157,24 @@ namespace CoffeeManagement
             guna2ChartSale.Update();
         }
 
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            // You can load any initial data or setup here if needed.
+        }
 
+        private void frmHome_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ChartRevenue_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ChartSale_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
