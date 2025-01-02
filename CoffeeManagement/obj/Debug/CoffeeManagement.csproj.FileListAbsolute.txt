@@ -1,0 +1,266 @@
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CoffeeManagement.exe.config
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CoffeeManagement.exe
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CoffeeManagement.pdb
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Guna.UI2.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Guna.Charts.WinForms.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.AssemblyReference.cache
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.FormLogin.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Properties.Resources.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.GenerateResource.cache
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.CoreCompileInputs.cache
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeMa.A10C44DF.Up2Date
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.exe
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.pdb
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.formMain.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.frmHome.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.SampleAdd.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.SampleView.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmCategoryView.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmCategoryAdd.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmTableView.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmTableAdd.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmStaffAdd.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmStaffView.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmProductAdd.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmProductView.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmPOS.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.ucProduct.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmTableSelect.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmWaiterSelect.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmKitchenView.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmBillList.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmCheckOut.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmAddCustomer.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\stdole.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\obj\Debug\CoffeeManagement.frmPrint.resources
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Buffers.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Memory.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Text.Json.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.ValueTuple.dll
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Buffers.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Memory.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Text.Json.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\System.ValueTuple.xml
+C:\Users\HOAI LINH\source\repos\CoffeeManagement\CoffeeManagement\bin\Debug\appsettings.json
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.AssemblyReference.cache
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.FormLogin.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.formMain.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.frmHome.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.frmPrint.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmAddCustomer.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmBillList.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmCategoryAdd.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmCheckOut.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmPOS.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmProductAdd.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmStaffAdd.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmTableAdd.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmTableSelect.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmWaiterSelect.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Model.ucProduct.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.Properties.Resources.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.SampleAdd.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.SampleView.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmCategoryView.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmKitchenView.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmProductView.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmStaffView.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmTableView.resources
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.GenerateResource.cache
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.CoreCompileInputs.cache
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.exe
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeManagement.pdb
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\appsettings.json
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CM.mdf
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CM_log.ldf
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CoffeeManagement.exe.config
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CoffeeManagement.exe
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CoffeeManagement.pdb
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Guna.UI2.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Buffers.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Memory.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Text.Json.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.ValueTuple.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\stdole.dll
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Guna.Charts.WinForms.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Buffers.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Memory.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Text.Json.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\bin\Debug\System.ValueTuple.xml
+C:\Users\phant\Desktop\CM\CoffeeManagement\obj\Debug\CoffeeMa.A10C44DF.Up2Date
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\appsettings.json
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CM.mdf
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CM_log.ldf
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CoffeeManagement.exe.config
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CoffeeManagement.exe
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CoffeeManagement.pdb
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.Shared.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Guna.Charts.WinForms.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Guna.UI2.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Buffers.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Memory.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Numerics.Vectors.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Text.Encodings.Web.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Text.Json.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.ValueTuple.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\stdole.dll
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Guna.Charts.WinForms.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Buffers.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Memory.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Numerics.Vectors.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Text.Encodings.Web.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Text.Json.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\CM-main\CM-main\CoffeeManagement\bin\Debug\System.ValueTuple.xml
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.AssemblyReference.cache
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.FormLogin.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.formMain.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.frmHome.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.frmPrint.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmAddCustomer.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmBillList.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmCategoryAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmCheckOut.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmPOS.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmProductAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmStaffAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmTableAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmTableSelect.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmWaiterSelect.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.ucProduct.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Properties.Resources.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.SampleAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.SampleView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmCategoryView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmKitchenView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmProductView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmStaffView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmTableView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.GenerateResource.cache
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.csproj.CoreCompileInputs.cache
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeMa.A10C44DF.Up2Date
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.exe
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.pdb
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmStorehouseView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.Model.frmStorehouseAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmStorehouseHistoryView.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmSupplierAdd.resources
+D:\CM-main\CM-main\CoffeeManagement\obj\Debug\CoffeeManagement.View.frmSupplierView.resources
