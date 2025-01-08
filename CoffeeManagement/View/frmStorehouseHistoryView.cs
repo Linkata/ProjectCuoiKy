@@ -34,9 +34,11 @@ namespace CoffeeManagement.View
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
+            saveFileDialog1.FileName = "NhapKho_" + DateTime.Now.ToString("dd-MM-yyyy") + ".xlsx";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 ToExcel(guna2DataGridView1, saveFileDialog1.FileName);
+
             }
         }
         private void ToExcel(DataGridView dataGridView1, string fileName)
@@ -47,6 +49,8 @@ namespace CoffeeManagement.View
 
             try
             {
+                string currentDate = DateTime.Now.ToString("dd-MM-yyyy");
+                
                 excel = new Microsoft.Office.Interop.Excel.Application();
                 excel.Visible = false;
                 excel.DisplayAlerts = false;
@@ -54,7 +58,7 @@ namespace CoffeeManagement.View
                 workbook = excel.Workbooks.Add(Type.Missing);
 
                 worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets["Sheet1"];
-                worksheet.Name = "LICH SU NHAP KHO";
+                worksheet.Name = currentDate ;
 
                 // export header
                 for (int i = 0; i < dataGridView1.ColumnCount; i++)

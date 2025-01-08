@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,8 +29,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -327,6 +327,11 @@
     <Compile Include="View\frmTableView.Designer.cs">
       <DependentUpon>frmTableView.cs</DependentUpon>
     </Compile>
+    <Compile Include="_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Model\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -435,6 +440,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.xsc">
+      <DependentUpon>_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.xss">
+      <DependentUpon>_C__USERS_OWNER_DESKTOP_PROJECTCUOIKY_COFFEEMANAGEMENT_CM_MDFDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -560,17 +576,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CM.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CM_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CM.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\Supplier.png" />
     <None Include="Resources\warehouse.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CM1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CM1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\ExcelDna.Interop.15.0.1\build\ExcelDna.Interop.targets" Condition="Exists('..\packages\ExcelDna.Interop.15.0.1\build\ExcelDna.Interop.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

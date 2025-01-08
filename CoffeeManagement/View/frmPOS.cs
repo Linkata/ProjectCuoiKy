@@ -118,6 +118,7 @@ namespace CoffeeManagement.Model
             string qry = "Select * from products inner join category on catID = CategoryID";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.CommandTimeout = 120;
             DataTable dt = new DataTable();
             da.Fill(dt);
             foreach (DataRow item in dt.Rows) {
@@ -288,12 +289,12 @@ namespace CoffeeManagement.Model
                 detailID = Convert.ToInt32(row.Cells["dgvid"].Value);
                 if (detailID == 0)
                 {
-                    qry2 = @"Insert into tblDetails (MainID, proID, qty, price, amount,note) 
-                     Values (@MainID, @proID, @qty, @price, @amount,@note)";
+                    qry2 = @"Insert into tblDetails (MainID, proID, qty, price, amount) 
+                     Values (@MainID, @proID, @qty, @price, @amount)";
                 }
                 else
                 {
-                    qry2 = @"Update tblDetails Set proID=@proID,qty=@qty,price=@price,amount=@amount,note=@note
+                    qry2 = @"Update tblDetails Set proID=@proID,qty=@qty,price=@price,amount=@amount
 where DetailID=@ID";
                 }
                 SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
@@ -303,7 +304,7 @@ where DetailID=@ID";
                 cmd2.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvqty"].Value));
                 cmd2.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvPrice"].Value));
                 cmd2.Parameters.AddWithValue("@amount", Convert.ToDouble(row.Cells["dgvAmount"].Value));
-                cmd2.Parameters.AddWithValue("@note", row.Cells["dgvNote"].Value.ToString());
+                
                 if (MainClass.con.State == ConnectionState.Closed) { MainClass.con.Open(); }
                 cmd2.ExecuteNonQuery(); 
                 if (MainClass.con.State == ConnectionState.Open) { MainClass.con.Close(); }
@@ -476,5 +477,70 @@ where DetailID=@ID";
             lblTotal.Text = "00";
             lblDriverName.Text = "";
         }
+        
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvUp")
+            {
+                int currentQty = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvQty"].Value);
+                double pricePerUnit = Convert.ToDouble(guna2DataGridView1.CurrentRow.Cells["dgvPrice"].Value); // Giả sử bạn có cột giá đơn vị
+
+                guna2DataGridView1.CurrentRow.Cells["dgvQty"].Value = currentQty + 1;
+                guna2DataGridView1.CurrentRow.Cells["dgvAmount"].Value = (currentQty + 1) * pricePerUnit; // Cập nhật giá trị Amount
+
+                GetTotal(); // Cập nhật tổng sau khi tăng số lượng
+            }
+
+            if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvDown")
+            {
+                int currentQty = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvQty"].Value);
+                double pricePerUnit = Convert.ToDouble(guna2DataGridView1.CurrentRow.Cells["dgvPrice"].Value); // Giả sử bạn có cột giá đơn vị
+
+                if (currentQty > 1)
+                {
+                    guna2DataGridView1.CurrentRow.Cells["dgvQty"].Value = currentQty - 1;
+                    guna2DataGridView1.CurrentRow.Cells["dgvAmount"].Value = (currentQty - 1) * pricePerUnit; // Cập nhật giá trị Amount
+
+                    GetTotal(); // Cập nhật tổng sau khi giảm số lượng
+                }
+                else if (currentQty == 1) // Khi số lượng là 1 và bấm giảm, sẽ thành 0
+                {
+                    // Lấy id của hàng cần xóa
+                    int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
+
+                    // Xóa hàng khỏi cơ sở dữ liệu
+                    string qry = "Delete from tblDetails where DetailID=" + id + "";
+                    Hashtable ht = new Hashtable();
+                    MainClass.SQL(qry, ht);
+
+                    // Xóa hàng khỏi DataGridView
+                    guna2DataGridView1.Rows.RemoveAt(e.RowIndex);
+
+                    GetTotal(); // Cập nhật tổng sau khi xóa hàng
+                }
+            }
+        }
+
+        
+        // Hàm để lưu thay đổi vào cơ sở dữ liệu
+        private void SaveChangesToDatabase()
+        {
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                int id = Convert.ToInt32(row.Cells["dgvid"].Value);
+                int qty = Convert.ToInt32(row.Cells["dgvQty"].Value);
+                double amount = Convert.ToDouble(row.Cells["dgvAmount"].Value);
+
+                // Cập nhật cơ sở dữ liệu với số lượng và giá trị mới
+                string qry = "Update tblDetails set qty = " + qty + ", amount = " + amount + " where DetailID = " + id;
+                Hashtable ht = new Hashtable();
+                MainClass.SQL(qry, ht);
+            }
+        }
+
+      
+
+
     }
 }

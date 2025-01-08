@@ -1,4 +1,8 @@
-﻿using System;
+﻿using CoffeeManagement.Bl;
+using CoffeeManagement.DL;
+using CoffeeManagement.Model;
+using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,9 +16,11 @@ namespace CoffeeManagement
 {
     public partial class frmHome : Form
     {
+        private readonly MaterialBL materialBL;
         public frmHome()
         {
             InitializeComponent();
+            materialBL = new MaterialBL();
         }
 
         private void btnShowRevenue_Click(object sender, EventArgs e)
@@ -22,7 +28,7 @@ namespace CoffeeManagement
             DateTime startDate = dateTimePickerStart.Value;
             DateTime endDate = dateTimePickerEnd.Value;
 
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Owner\\Desktop\\ProjectCuoiKy\\CoffeeManagement\\CM.mdf;Integrated Security=True;Connect Timeout=30"; // Thay thế bằng chuỗi kết nối thực tế của bạn
+            string connectionString = DatabaseHelper.GetConnectionString();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"SELECT aDate, SUM(amount) AS [Tổng doanh thu]
@@ -37,7 +43,7 @@ namespace CoffeeManagement
                     cmd.Parameters.AddWithValue("@startDate", startDate);
                     cmd.Parameters.AddWithValue("@endDate", endDate);
 
-                    DataTable dt = new DataTable();
+                    System.Data.DataTable dt = new System.Data.DataTable();
                     con.Open();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -48,7 +54,7 @@ namespace CoffeeManagement
             }
         }
 
-        private void DisplayGunaChart(DataTable dt)
+        private void DisplayGunaChart(System.Data.DataTable dt)
         {
             // Xóa các series cũ trong biểu đồ
             guna2ChartRevenue.Datasets.Clear();
@@ -95,7 +101,7 @@ namespace CoffeeManagement
 
         private void btnShowProductSales_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Owner\\Desktop\\ProjectCuoiKy\\CoffeeManagement\\CM.mdf;Integrated Security=True;Connect Timeout=30"; // Thay thế bằng chuỗi kết nối thực tế của bạn
+            string connectionString = DatabaseHelper.GetConnectionString();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"SELECT pName, SUM(qty) AS [Tổng doanh số]
@@ -106,7 +112,7 @@ namespace CoffeeManagement
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    DataTable dt = new DataTable();
+                    System.Data.DataTable dt = new System.Data.DataTable();
                     con.Open();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -117,7 +123,7 @@ namespace CoffeeManagement
             }
         }
 
-        private void DisplayPieChart(DataTable dt)
+        private void DisplayPieChart(System.Data.DataTable dt)
         {
             // Xóa các series cũ trong biểu đồ
             guna2ChartSale.Datasets.Clear();
@@ -159,7 +165,7 @@ namespace CoffeeManagement
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            // You can load any initial data or setup here if needed.
+            
         }
 
         private void frmHome_Load_1(object sender, EventArgs e)
@@ -175,6 +181,51 @@ namespace CoffeeManagement
         private void guna2ChartSale_Load(object sender, EventArgs e)
         {
 
+        }
+        private void LoadMaterialExDateComing()
+        {
+            var exMaterial = materialBL.GetExpiringMaterials();
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.DataSource = exMaterial;
+            guna2DataGridView1.AutoResizeRows();
+        }
+        
+        
+
+        private void LoadPieChart()
+        {
+            var stats = materialBL.GetMaterialStatistics();
+
+            // Xóa các series cũ trong biểu đồ
+            gunaChartMaterial.Datasets.Clear();
+
+            // Đặt vị trí chú giải sang phải và ẩn trục X, Y
+            gunaChartMaterial.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
+            gunaChartMaterial.XAxes.Display = false;
+            gunaChartMaterial.YAxes.Display = false;
+
+            // Tạo một series mới cho biểu đồ tròn
+            var pieSeries = new Guna.Charts.WinForms.GunaPieDataset
+            {
+                Label = "Tình trạng nguyên liệu"
+            };
+
+            // Thêm dữ liệu vào series
+            pieSeries.DataPoints.Add("Còn hạn sử dụng", stats.ValidMaterials);
+            pieSeries.DataPoints.Add("Đã hết hạn", stats.ExpiredMaterials);
+            pieSeries.DataPoints.Add("Sắp hết hạn (trong 7 ngày)", stats.ExpiringSoonMaterials);
+
+            // Thêm series vào biểu đồ
+            gunaChartMaterial.Datasets.Add(pieSeries);
+
+            // Cập nhật biểu đồ để hiển thị dữ liệu mới
+            gunaChartMaterial.Update();
+        }
+    
+    private void frmHome_Load_2(object sender, EventArgs e)
+        {
+            LoadMaterialExDateComing();
+            LoadPieChart();
         }
     }
 }

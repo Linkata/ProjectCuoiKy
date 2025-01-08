@@ -29,7 +29,7 @@ namespace CoffeeManagement.Model
                 lblDriver.Visible = false;
                 cbDriver.Visible = false;
             }
-            string qry = "Select staffID 'id', sName 'name' from staff where sRole like 'Tài xế'";
+            string qry = "Select staffID 'id', sName 'name' from staff where sRole like N'Tài xế'";
             MainClass.CBFill(qry, cbDriver);
             if (mainID > 0)
             {

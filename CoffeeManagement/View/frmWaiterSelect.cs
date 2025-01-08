@@ -21,7 +21,7 @@ namespace CoffeeManagement.Model
 
         private void frmWaiterSelect_Load(object sender, EventArgs e)
         {
-            string qry = "Select * from staff where sRole like 'Nhân viên phục vụ'";
+            string qry = "Select * from staff where sRole like N'Nhân viên phục vụ'";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

@@ -50,10 +50,56 @@ namespace CoffeeManagement.Bl
         }
 
         // Lấy danh sách nguyên vật liệu sắp hết hạn (MaterialTL)
-        public List<MaterialTL> GetExpiringMaterials()
+        public List<StorehouseHistoryTL> GetExpiringMaterials()
         {
-            var allMaterials = materialDAL.GetMaterials();
-            return allMaterials.Where(m => (m.Hạn_sử_dụng - DateTime.Now).TotalDays <= 3).ToList();
+            var exMaterial = new List<StorehouseHistoryTL>();
+            string query = @"SELECT 
+    WarehouseHistory.HistoryID, 
+    Materials.MaterialID, 
+    Materials.MaterialName,
+    WarehouseHistory.Quantity AS EntryQuantity,
+    Materials.Unit, 
+    Suppliers.SupplierName, 
+    Suppliers.SupplierPhone,
+    Materials.ExpiryDate, 
+    WarehouseHistory.EntryDate
+FROM 
+    WarehouseHistory
+LEFT JOIN 
+    Materials ON WarehouseHistory.MaterialID = Materials.MaterialID
+LEFT JOIN 
+    Suppliers ON WarehouseHistory.SupplierID = Suppliers.SupplierID
+WHERE 
+    Materials.ExpiryDate BETWEEN GETDATE() AND DATEADD(day, 7, GETDATE());
+";
+
+            using (var connection = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            using (var command = new SqlCommand(query, connection))
+            {
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        exMaterial.Add(new StorehouseHistoryTL
+                        {
+                            HistoryID = reader.GetInt32(reader.GetOrdinal("HistoryID")),
+                            MaterialID = reader.GetInt32(reader.GetOrdinal("MaterialID")),
+                            Tên_nguyên_liệu = reader.GetString(reader.GetOrdinal("MaterialName")),
+                            Số_lượng = reader.GetInt32(reader.GetOrdinal("EntryQuantity")),
+                            Đơn_vị = reader.GetString(reader.GetOrdinal("Unit")),
+
+                            Tên_nhà_cung_cấp = reader.IsDBNull(reader.GetOrdinal("SupplierName")) ? null : reader.GetString(reader.GetOrdinal("SupplierName")),
+                            SDT_nhà_cung_cấp = reader.IsDBNull(reader.GetOrdinal("SupplierPhone")) ? null : reader.GetString(reader.GetOrdinal("SupplierPhone")),
+                            Ngày_nhập_kho = reader.GetDateTime(reader.GetOrdinal("EntryDate")),
+                            Hạn_sử_dụng = reader.GetDateTime(reader.GetOrdinal("ExpiryDate")),
+                        });
+                    }
+                }
+            }
+
+            return exMaterial;
+
         }
 
         // Thêm nguyên vật liệu mới (MaterialTL)
@@ -124,5 +170,41 @@ namespace CoffeeManagement.Bl
 
             return supplierID;
         }
+
+        public MaterialStatistics GetMaterialStatistics()
+        {
+            var allMaterials = GetAllMaterials();
+            var statistics = new MaterialStatistics();
+
+            DateTime now = DateTime.Now;
+            DateTime sevenDaysFromNow = now.AddDays(7);
+
+            foreach (var material in allMaterials)
+            {
+                if (material.Hạn_sử_dụng < now)
+                {
+                    statistics.ExpiredMaterials++;
+                }
+                else if (material.Hạn_sử_dụng <= sevenDaysFromNow)
+                {
+                    statistics.ExpiringSoonMaterials++;
+                }
+                else
+                {
+                    statistics.ValidMaterials++;
+                }
+            }
+
+            return statistics;
+        }
+
+        public class MaterialStatistics
+        {
+            public int ValidMaterials { get; set; }
+            public int ExpiredMaterials { get; set; }
+            public int ExpiringSoonMaterials { get; set; }
+        }
+
     }
 }
+

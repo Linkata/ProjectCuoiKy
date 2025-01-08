@@ -51,8 +51,10 @@
             this.ProductPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDriverName = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvproID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +62,8 @@
             this.dgvQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUp = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvDown = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -385,11 +388,6 @@
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -399,6 +397,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 40;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSno,
             this.dgvid,
@@ -407,7 +406,8 @@
             this.dgvQty,
             this.dgvPrice,
             this.dgvAmount,
-            this.dgvNote});
+            this.dgvUp,
+            this.dgvDown});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -416,7 +416,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(995, 197);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
@@ -424,7 +423,6 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Size = new System.Drawing.Size(473, 482);
             this.guna2DataGridView1.TabIndex = 8;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -448,6 +446,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             this.guna2DataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.guna2DataGridView1_CellFormatting);
             // 
             // guna2MessageDialog1
@@ -458,6 +457,35 @@
             this.guna2MessageDialog1.Parent = null;
             this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.guna2MessageDialog1.Text = null;
+            // 
+            // lblDriverName
+            // 
+            this.lblDriverName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDriverName.AutoSize = true;
+            this.lblDriverName.BackColor = System.Drawing.Color.Transparent;
+            this.lblDriverName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDriverName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDriverName.Location = new System.Drawing.Point(516, 153);
+            this.lblDriverName.Name = "lblDriverName";
+            this.lblDriverName.Size = new System.Drawing.Size(79, 37);
+            this.lblDriverName.TabIndex = 12;
+            this.lblDriverName.Text = "Table";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Tăng";
+            this.dataGridViewImageColumn1.Image = global::CoffeeManagement.Properties.Resources.plus;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 91;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Giảm";
+            this.dataGridViewImageColumn2.Image = global::CoffeeManagement.Properties.Resources.minus;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 91;
             // 
             // txtSearch
             // 
@@ -481,19 +509,6 @@
             this.txtSearch.Size = new System.Drawing.Size(299, 48);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // lblDriverName
-            // 
-            this.lblDriverName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDriverName.AutoSize = true;
-            this.lblDriverName.BackColor = System.Drawing.Color.Transparent;
-            this.lblDriverName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDriverName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDriverName.Location = new System.Drawing.Point(516, 153);
-            this.lblDriverName.Name = "lblDriverName";
-            this.lblDriverName.Size = new System.Drawing.Size(79, 37);
-            this.lblDriverName.TabIndex = 12;
-            this.lblDriverName.Text = "Table";
             // 
             // dgvSno
             // 
@@ -556,12 +571,23 @@
             this.dgvAmount.Name = "dgvAmount";
             this.dgvAmount.ReadOnly = true;
             // 
-            // dgvNote
+            // dgvUp
             // 
-            this.dgvNote.HeaderText = "Note";
-            this.dgvNote.MinimumWidth = 6;
-            this.dgvNote.Name = "dgvNote";
-            this.dgvNote.ReadOnly = true;
+            this.dgvUp.HeaderText = "Tăng";
+            this.dgvUp.Image = global::CoffeeManagement.Properties.Resources.plus;
+            this.dgvUp.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvUp.MinimumWidth = 6;
+            this.dgvUp.Name = "dgvUp";
+            this.dgvUp.ReadOnly = true;
+            // 
+            // dgvDown
+            // 
+            this.dgvDown.HeaderText = "Giảm";
+            this.dgvDown.Image = global::CoffeeManagement.Properties.Resources.minus;
+            this.dgvDown.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvDown.MinimumWidth = 6;
+            this.dgvDown.Name = "dgvDown";
+            this.dgvDown.ReadOnly = true;
             // 
             // frmPOS
             // 
@@ -616,6 +642,8 @@
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
         public Guna.UI2.WinForms.Guna2Button btnCheckout;
         private System.Windows.Forms.Label lblDriverName;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvproID;
@@ -623,6 +651,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvNote;
+        private System.Windows.Forms.DataGridViewImageColumn dgvUp;
+        private System.Windows.Forms.DataGridViewImageColumn dgvDown;
     }
 }
